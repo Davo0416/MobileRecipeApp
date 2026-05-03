@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">रेसिपी ऐप</string>
+    <string name="search">खोजें</string>
+    <string name="search_recipes">रेसिपी खोजें</string>
+    <string name="filter">फ़िल्टर</string>
+    <string name="apply">लागू करें</string>
+    <string name="clear">साफ़ करें</string>
+    <string name="ingredients">सामग्री</string>
+    <string name="instructions">निर्देश</string>
+    <string name="video_tutorial">वीडियो ट्यूटोरियल</string>
+    <string name="select_country">देश चुनें</string>
+    <string name="select_category">श्रेणी चुनें</string>
+    <string name="max_time">अधिकतम समय (मिनट)</string>
+    <string name="max_ingredients">अधिकतम सामग्री</string>
+
+    <string-array name="countries">
+        <item>देश चुनें</item>
+        <item>अल्जीरियाई</item>
+        <item>अमेरिकी</item>
+        <item>अर्जेंटीनी</item>
+        <item>ऑस्ट्रेलियाई</item>
+        <item>ब्रिटिश</item>
+        <item>कनाडाई</item>
+        <item>चीनी</item>
+        <item>क्रोएशियाई</item>
+        <item>डच</item>
+        <item>मिस्री</item>
+        <item>फिलिपिनो</item>
+        <item>फ्रांसीसी</item>
+        <item>ग्रीक</item>
+        <item>भारतीय</item>
+        <item>आयरिश</item>
+        <item>इतालवी</item>
+        <item>जमैकिन</item>
+        <item>जापानी</item>
+        <item>केन्याई</item>
+        <item>मलेशियाई</item>
+        <item>मैक्सिकन</item>
+        <item>मोरक्कन</item>
+        <item>नॉर्वेजियन</item>
+        <item>पोलिश</item>
+        <item>पुर्तगाली</item>
+        <item>रूसी</item>
+        <item>सऊदी</item>
+        <item>स्लोवाक</item>
+        <item>स्पेनिश</item>
+        <item>सीरियाई</item>
+        <item>थाई</item>
+        <item>ट्यूनीशियाई</item>
+        <item>तुर्की</item>
+        <item>यूक्रेनी</item>
+        <item>उरुग्वेयन</item>
+        <item>वेनेज़ुएलाई</item>
+        <item>वियतनामी</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>श्रेणी चुनें</item>
+        <item>बीफ</item>
+        <item>चिकन</item>
+        <item>डेज़र्ट</item>
+        <item>शाकाहारी</item>
+        <item>वीगन</item>
+        <item>लैम्ब</item>
+        <item>बकरी</item>
+        <item>पास्ता</item>
+        <item>पोर्क</item>
+        <item>सीफूड</item>
+        <item>साइड</item>
+    </string-array>
+</resources>

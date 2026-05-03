@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application de Recettes</string>
+    <string name="search">Rechercher</string>
+    <string name="search_recipes">Rechercher des recettes</string>
+    <string name="filter">Filtrer</string>
+    <string name="apply">Appliquer</string>
+    <string name="clear">Effacer</string>
+    <string name="ingredients">Ingrédients</string>
+    <string name="instructions">Instructions</string>
+    <string name="video_tutorial">Tutoriel vidéo</string>
+    <string name="select_country">Sélectionner un pays</string>
+    <string name="select_category">Sélectionner une catégorie</string>
+    <string name="max_time">Temps max (minutes)</string>
+    <string name="max_ingredients">Ingrédients max</string>
+
+    <string-array name="countries">
+        <item>Seleccionar país</item>
+        <item>Argelino</item>
+        <item>Estadounidense</item>
+        <item>Argentino</item>
+        <item>Australiano</item>
+        <item>Británico</item>
+        <item>Canadiense</item>
+        <item>Chino</item>
+        <item>Croata</item>
+        <item>Neerlandés</item>
+        <item>Egipcio</item>
+        <item>Filipino</item>
+        <item>Francés</item>
+        <item>Griego</item>
+        <item>Indio</item>
+        <item>Irlandés</item>
+        <item>Italiano</item>
+        <item>Jamaicano</item>
+        <item>Japonés</item>
+        <item>Keniata</item>
+        <item>Malasio</item>
+        <item>Mexicano</item>
+        <item>Marroquí</item>
+        <item>Noruego</item>
+        <item>Polaco</item>
+        <item>Portugués</item>
+        <item>Ruso</item>
+        <item>Saudí</item>
+        <item>Eslovaco</item>
+        <item>Español</item>
+        <item>Sirio</item>
+        <item>Tailandés</item>
+        <item>Tunecino</item>
+        <item>Turco</item>
+        <item>Ucraniano</item>
+        <item>Uruguayo</item>
+        <item>Venezolano</item>
+        <item>Vietnamita</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>Seleccionar categoría</item>
+        <item>Carne de res</item>
+        <item>Pollo</item>
+        <item>Postre</item>
+        <item>Vegetariano</item>
+        <item>Vegano</item>
+        <item>Cordero</item>
+        <item>Cabra</item>
+        <item>Pasta</item>
+        <item>Cerdo</item>
+        <item>Mariscos</item>
+        <item>Acompañamiento</item>
+    </string-array>
+</resources>

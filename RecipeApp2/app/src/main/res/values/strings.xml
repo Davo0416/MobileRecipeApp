@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recipe App</string>
+    <string name="search">Search</string>
+    <string name="search_recipes">Search Recipes</string>
+    <string name="filter">Filter</string>
+    <string name="apply">Apply</string>
+    <string name="clear">Clear</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="instructions">Instructions</string>
+    <string name="video_tutorial">Video Tutorial</string>
+    <string name="select_country">Select a Country</string>
+    <string name="select_category">Select a Category</string>
+    <string name="max_time">Max Time (minutes)</string>
+    <string name="max_ingredients">Max Ingredients</string>
+
+    <string-array name="countries">
+        <item>Select a Country</item>
+        <item>Algerian</item>
+        <item>American</item>
+        <item>Argentinian</item>
+        <item>Australian</item>
+        <item>British</item>
+        <item>Canadian</item>
+        <item>Chinese</item>
+        <item>Croatian</item>
+        <item>Dutch</item>
+        <item>Egyptian</item>
+        <item>Filipino</item>
+        <item>French</item>
+        <item>Greek</item>
+        <item>Indian</item>
+        <item>Irish</item>
+        <item>Italian</item>
+        <item>Jamaican</item>
+        <item>Japanese</item>
+        <item>Kenyan</item>
+        <item>Malaysian</item>
+        <item>Mexican</item>
+        <item>Moroccan</item>
+        <item>Norwegian</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Russian</item>
+        <item>Saudi Arabian</item>
+        <item>Slovakian</item>
+        <item>Spanish</item>
+        <item>Syrian</item>
+        <item>Thai</item>
+        <item>Tunisian</item>
+        <item>Turkish</item>
+        <item>Ukrainian</item>
+        <item>Uruguayan</item>
+        <item>Venezuelan</item>
+        <item>Vietnamese</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>Select a Category</item>
+        <item>Beef</item>
+        <item>Chicken</item>
+        <item>Dessert</item>
+        <item>Vegetarian</item>
+        <item>Vegan</item>
+        <item>Lamb</item>
+        <item>Goat</item>
+        <item>Pasta</item>
+        <item>Pork</item>
+        <item>Seafood</item>
+        <item>Side</item>
+    </string-array>
+</resources>

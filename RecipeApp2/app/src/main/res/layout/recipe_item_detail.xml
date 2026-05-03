@@ -1,0 +1,203 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Detail Recipe Toolbar - Recipe Name + Time to Prepare -->
+        <androidx.appcompat.widget.Toolbar
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/custom_recipe_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:background="#b30000">
+
+            <!-- Recipe Name -->
+            <TextView
+                android:id="@+id/detailName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <!-- Time to Prepare -->
+            <TextView
+                android:id="@+id/detailTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginRight="15sp"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="end|center_vertical"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <!-- Recipe Details ScrollView -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Image Header -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp">
+
+                    <!-- Recipe Image -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/detailImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginRight="12dp"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+                    <!-- Recipe Category (top-left) -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/detailCategory"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|start"
+                        android:layout_margin="18dp"
+                        android:scaleType="centerInside"
+                        android:background="#CCFFFFFF"
+                        android:elevation="4dp"
+                        app:shapeAppearanceOverlay="@style/RoundedFlag" />
+
+                    <!-- Recipe Flag (top-right) -->
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/detailFlag"
+                        android:layout_width="52dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="top|end"
+                        android:layout_margin="18dp"
+                        android:scaleType="centerCrop"
+                        android:elevation="4dp"
+                        app:shapeAppearanceOverlay="@style/RoundedFlag" />
+
+                </FrameLayout>
+
+                <!-- Recipe Content -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Ingredients Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ingredients"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:paddingTop="12dp" />
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#DDDDDD" />
+
+                    <!-- Ingredient Recycler -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/ingredientRecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="true"/>
+
+                    <!-- Instructions Header -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/instructions"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:paddingTop="12dp" />
+
+                    <!-- Divider -->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="#DDDDDD" />
+
+                    <!-- Recipe Instructions -->
+                    <TextView
+                        android:id="@+id/detailInstructions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="6dp"
+                        android:lineSpacingExtra="4dp" />
+
+                    <!-- Video Container -->
+                    <LinearLayout
+                        android:id="@+id/videoContainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <!-- Video Title -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/video_tutorial"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            android:paddingTop="12dp" />
+
+                        <!-- Divider -->
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="8dp"
+                            android:background="#DDDDDD" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp"
+                            android:layout_marginTop="8dp">
+
+                            <!-- Thumbnail -->
+                            <ImageView
+                                android:id="@+id/videoThumbnail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:background="#FF000000" />
+
+                            <!-- Play button overlay -->
+                            <ImageView
+                                android:id="@+id/playButton"
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/play" />
+                        </FrameLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

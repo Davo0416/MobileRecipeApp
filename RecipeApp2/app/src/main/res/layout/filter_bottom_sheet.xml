@@ -1,0 +1,116 @@
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Country Spinner -->
+    <Spinner
+        android:id="@+id/countrySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!-- Category Spinner -->
+    <Spinner
+        android:id="@+id/categorySpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Time Slider -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/max_time"
+        android:paddingLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:paddingLeft="11.5dp"
+            android:paddingRight="7.2dp"
+            android:gravity="center_vertical"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/timeSlider"
+            android:layout_width="333dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:stepSize="5"
+            android:valueFrom="10"
+            android:valueTo="180"
+            app:labelBehavior="floating" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="180"
+            android:paddingRight="11.5dp"
+            android:gravity="center_vertical"/>
+
+    </LinearLayout>
+    <!-- Ingredient Count Slider-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/max_ingredients"
+        android:paddingLeft="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:paddingLeft="11.5dp"
+            android:gravity="center_vertical"/>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/ingredientSlider"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:stepSize="1"
+            android:valueFrom="5"
+            android:valueTo="30"
+            app:labelBehavior="floating"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="11.5dp"
+            android:paddingRight="8dp"
+            android:text="30" />
+    </LinearLayout>
+
+    <!-- Apply Button -->
+    <Button
+        android:id="@+id/applyFilters"
+        android:text="@string/apply"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#b30000"
+        android:textColor="#FFFFFF"/>
+
+    <!-- Clear Button -->
+    <Button
+        android:id="@+id/clearFilters"
+        android:text="@string/clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#b30000"
+        android:textColor="#FFFFFF"/>
+</LinearLayout>

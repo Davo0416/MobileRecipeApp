@@ -1,0 +1,89 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp">
+
+            <!-- Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/recipeImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/RoundedImage"/>
+
+            <!-- Recipe Category (top-left) -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/category"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="top|start"
+                android:padding="8dp"
+                android:background="@android:color/white"
+                app:shapeAppearanceOverlay="@style/RoundedFlag" />
+
+            <!-- Recipe Flag (top-right) -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/flag"
+                android:layout_width="50dp"
+                android:layout_height="36dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="top|end"
+                android:padding="8dp"
+                app:shapeAppearanceOverlay="@style/RoundedFlag" />
+
+        </FrameLayout>
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/recipeName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="6dp"/>
+
+        <!-- Info Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="4dp">
+
+            <!-- Recipe Ingredient Count -->
+            <TextView
+                android:id="@+id/ingredientCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:padding="2dp" />
+
+            <!-- Recipe Time -->
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textSize="14sp"
+                android:padding="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Rezept-App</string>
+    <string name="search">Suchen</string>
+    <string name="search_recipes">Rezepte suchen</string>
+    <string name="filter">Filter</string>
+    <string name="apply">Anwenden</string>
+    <string name="clear">Löschen</string>
+    <string name="ingredients">Zutaten</string>
+    <string name="instructions">Anleitung</string>
+    <string name="video_tutorial">Video-Anleitung</string>
+    <string name="select_country">Land auswählen</string>
+    <string name="select_category">Kategorie auswählen</string>
+    <string name="max_time">Max Zeit (Minuten)</string>
+    <string name="max_ingredients">Max Zutaten</string>
+
+    <string-array name="countries">
+        <item>Land auswählen</item>
+        <item>Algerisch</item>
+        <item>Amerikanisch</item>
+        <item>Argentinisch</item>
+        <item>Australisch</item>
+        <item>Britisch</item>
+        <item>Kanadisch</item>
+        <item>Chinesisch</item>
+        <item>Kroatisch</item>
+        <item>Niederländisch</item>
+        <item>Ägyptisch</item>
+        <item>Philippinisch</item>
+        <item>Französisch</item>
+        <item>Griechisch</item>
+        <item>Indisch</item>
+        <item>Irisch</item>
+        <item>Italienisch</item>
+        <item>Jamaikanisch</item>
+        <item>Japanisch</item>
+        <item>Kenyaisch</item>
+        <item>Malaysisch</item>
+        <item>Mexikanisch</item>
+        <item>Marokkanisch</item>
+        <item>Norwegisch</item>
+        <item>Polnisch</item>
+        <item>Portugiesisch</item>
+        <item>Russisch</item>
+        <item>Saudi-Arabisch</item>
+        <item>Slowakisch</item>
+        <item>Spanisch</item>
+        <item>Syrisch</item>
+        <item>Thailändisch</item>
+        <item>Tunesisch</item>
+        <item>Türkisch</item>
+        <item>Ukrainisch</item>
+        <item>Uruguayisch</item>
+        <item>Venezolanisch</item>
+        <item>Vietnamesisch</item>
+    </string-array>
+
+    <string-array name="categories">
+        <item>Kategorie auswählen</item>
+        <item>Rind</item>
+        <item>Hähnchen</item>
+        <item>Dessert</item>
+        <item>Vegetarisch</item>
+        <item>Vegan</item>
+        <item>Lamm</item>
+        <item>Ziege</item>
+        <item>Nudeln</item>
+        <item>Schwein</item>
+        <item>Meeresfrüchte</item>
+        <item>Beilage</item>
+    </string-array>
+</resources>
