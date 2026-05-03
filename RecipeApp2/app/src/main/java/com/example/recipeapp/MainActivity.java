@@ -20,6 +20,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -28,6 +29,7 @@ import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 
+import java.nio.channels.SelectableChannel;
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.Objects;
@@ -41,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Declaring variables for user selections
-    String selectedCountry = "";
-    String selectedCategory = "";
+    int selectedCountryId = 0;
+    int selectedCategoryId = 0;
     int maxTime = 180;
     int maxIngredients = 30;
     int selectedLanguage = 0;
@@ -50,6 +52,62 @@ public class MainActivity extends AppCompatActivity {
 
     String[] languages = {
             "English", "Spanish", "French", "German", "Chinese", "Hindi"
+    };
+
+    String[] countryValues = {
+            "",
+            "Algerian",
+            "American",
+            "Argentinian",
+            "Australian",
+            "British",
+            "Canadian",
+            "Chinese",
+            "Croatian",
+            "Dutch",
+            "Egyptian",
+            "Filipino",
+            "French",
+            "Greek",
+            "Indian",
+            "Irish",
+            "Italian",
+            "Jamaican",
+            "Japanese",
+            "Kenyan",
+            "Malaysian",
+            "Mexican",
+            "Moroccan",
+            "Norwegian",
+            "Polish",
+            "Portuguese",
+            "Russian",
+            "Saudi Arabian",
+            "Slovakian",
+            "Spanish",
+            "Syrian",
+            "Thai",
+            "Tunisian",
+            "Turkish",
+            "Ukrainian",
+            "Uruguayan",
+            "Venezuelan",
+            "Vietnamese"
+    };
+
+    String[] categoryValues = {
+            "",
+            "Beef",
+            "Chicken",
+            "Dessert",
+            "Vegetarian",
+            "Vegan",
+            "Lamb",
+            "Goat",
+            "Pasta",
+            "Pork",
+            "Seafood",
+            "Side"
     };
 
     //Connection & preference storage constants
@@ -171,15 +229,18 @@ public class MainActivity extends AppCompatActivity {
         //Create and queue import request for API
         RequestQueue queue = Volley.newRequestQueue(this);
         String url;
-        JsonArrayRequest importRequest = new JsonArrayRequest(Request.Method.GET, BASE_URL + "import/" + Uri.encode(query), null,
-                response -> {},
-                error -> {
-                    //Show error if somethings wrong
-                    error.printStackTrace();
-                    android.util.Log.e("API_ERROR", error.toString());
-                }
-        );
-        queue.add(importRequest);
+        if(query != null && !query.isEmpty()) {
+            JsonArrayRequest importRequest = new JsonArrayRequest(Request.Method.GET, BASE_URL + "import/" + Uri.encode(query), null,
+                    response -> {
+                    },
+                    error -> {
+                        //Show error if somethings wrong
+                        error.printStackTrace();
+                        android.util.Log.e("API_ERROR", error.toString());
+                    }
+            );
+            queue.add(importRequest);
+        }
 
         //Assemble the search request URL
         url = BASE_URL + "search/";
@@ -189,10 +250,12 @@ public class MainActivity extends AppCompatActivity {
             url += "a";
         }
 
-        url += "?country=" + Uri.encode(selectedCountry)
-                + "&category=" + Uri.encode(selectedCategory)
+        url += "?country=" + Uri.encode(countryValues[selectedCountryId])
+                + "&category=" + Uri.encode(categoryValues[selectedCategoryId])
                 + "&maxTime=" + maxTime
                 + "&maxIngredients=" + maxIngredients;
+
+        Log.d("URL", url);
 
         //Create and queue a search request for API
         @SuppressLint("NotifyDataSetChanged") JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null,
@@ -246,6 +309,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Define selection countries & categories from the selected language file
         String[] countries = getResources().getStringArray(R.array.countries);
+        //Values for api - localization can break it
+
         String[] categories = getResources().getStringArray(R.array.categories);
 
         //Setting the adapters
@@ -253,19 +318,16 @@ public class MainActivity extends AppCompatActivity {
         categorySpinner.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, categories));
 
         //Re-selecting previously selected values
-        countrySpinner.setSelection(getIndex(countrySpinner, selectedCountry));
-        categorySpinner.setSelection(getIndex(categorySpinner, selectedCategory));
+        countrySpinner.setSelection(selectedCountryId);
+        categorySpinner.setSelection(selectedCategoryId);
         timeSlider.setValue(maxTime);
         ingredientSlider.setValue(maxIngredients);
 
         //Apply click listener
         apply.setOnClickListener(v -> {
             //Get user selected values
-            selectedCountry = countrySpinner.getSelectedItem().toString();
-            if (countrySpinner.getSelectedItemPosition() == 0) selectedCountry = "";
-
-            selectedCategory = categorySpinner.getSelectedItem().toString();
-            if (categorySpinner.getSelectedItemPosition() == 0) selectedCategory = "";
+            selectedCountryId = countrySpinner.getSelectedItemPosition();
+            selectedCategoryId = categorySpinner.getSelectedItemPosition();
 
             maxTime = (int) timeSlider.getValue();
             maxIngredients = (int) ingredientSlider.getValue();
@@ -279,8 +341,8 @@ public class MainActivity extends AppCompatActivity {
         //Clear click listener
         clear.setOnClickListener(v -> {
             //Clear all the selections
-            selectedCountry = "";
-            selectedCategory = "";
+            selectedCountryId = 0;
+            selectedCategoryId = 0;
             maxTime = 180;
             maxIngredients = 30;
             countrySpinner.setSelection(0);
