@@ -17,7 +17,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddHttpClient<MealDBService>();
 
 builder.Services.AddDbContext<RecipeContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 
