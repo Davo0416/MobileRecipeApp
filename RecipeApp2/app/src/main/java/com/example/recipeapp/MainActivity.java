@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     //Connection & preference storage constants
-    public static final String BASE_URL = "http://192.168.8.108:5070/api/recipe/";
+    public static final String BASE_URL = "https://mobilerecipeapp-production.up.railway.app/api/recipe/";
     private static final String PREFS_NAME = "MyPrefs";
     private static final String PREF_LANG_CODE = "language_code";
     private static final String PREF_LANG_POS = "language_position";

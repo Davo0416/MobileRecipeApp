@@ -34,7 +34,7 @@ import java.util.regex.Pattern;
 
 public class RecipeDetailActivity extends AppCompatActivity {
     //Connection URL
-    public static final String BASE_URL = "http://192.168.8.108:5070/api/recipe/";
+    public static final String BASE_URL = "https://mobilerecipeapp-production.up.railway.app/api/recipe/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
