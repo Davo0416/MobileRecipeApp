@@ -74,8 +74,6 @@ The app combines **intuitive navigation**, **interactive filtering**, and **rich
 **APIs:**
 
 - TheMealDB API for recipe information
-- Country Flag CDN services for country flag images
-- YouTube video links provided through recipe data
 
 ---
 
@@ -175,12 +173,14 @@ or
 Below are screenshots of the main pages of the application.
 
 ### Home Screen
+<img width="1080" height="2255" alt="1000012611" src="https://github.com/user-attachments/assets/8230051e-bf81-4386-a64f-22cc86b92547" />
 
 - Recipe browsing interface
 - Search functionality
 - Language selection
 
 ### Filter Dialog
+<img width="1080" height="2258" alt="1000012613" src="https://github.com/user-attachments/assets/a10f68ff-e52f-4226-bb82-ffddc68907b0" />
 
 - Country filtering
 - Category filtering
@@ -188,22 +188,17 @@ Below are screenshots of the main pages of the application.
 - Ingredient count slider
 
 ### Recipe Results
+<img width="1080" height="2258" alt="1000012615" src="https://github.com/user-attachments/assets/ec35d8b3-262b-42d9-bb1f-bf1c836d1762" />
 
 - Filtered recipe list
-- Country flags
-- Category indicators
 
 ### Recipe Detail Screen
+<img width="1080" height="6280" alt="1000012617" src="https://github.com/user-attachments/assets/67df8c48-1b3a-4d0e-b1c5-11efa216bf33" />
 
 - Full recipe information
 - Ingredients list
 - Cooking instructions
-- Recipe image
-
-### Video Tutorial Section
-
-- Embedded recipe video preview
-- Quick access to cooking tutorials
+- Recipe video preview
 
 ---
 
@@ -212,15 +207,10 @@ Below are screenshots of the main pages of the application.
 The project includes Espresso UI tests covering:
 
 - Search functionality
-- Filter dialog interaction
-- Slider filtering
-- Country filtering
-- Category filtering
+- Filter functionality
 - Language switching
-- RecyclerView population
-- Recipe detail navigation
-- Video section visibility
-- Filter reset functionality
+- Recipe navigation
+- Video functionality
 
 These tests help ensure that all major user workflows function correctly across Android devices.
 
@@ -236,5 +226,4 @@ These tests help ensure that all major user workflows function correctly across 
 - Dark mode support
 - Additional language translations
 - Recipe rating and review functionality
-- AI-powered recipe suggestions
-- Meal planning and shopping list generation
+- Meal planning
